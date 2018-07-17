@@ -1,2 +1,2 @@
 # JavaScript-basico
-Some files with basic exercises 
+Some files with basic exercises.

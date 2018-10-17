@@ -1,5 +1,6 @@
 'use strict'
 
+window.addEventListener('load', () => {
 var boton = document.querySelector("#color");
 
 //Evento click
@@ -58,8 +59,6 @@ function Animacion (){
     return intervalo;
 }
 
-
-window.addEventListener('load', () => {
     //Sirve igual que document.ready de Jquery
 
     var animacion = Animacion();

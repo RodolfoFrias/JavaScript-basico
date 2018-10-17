@@ -5,7 +5,9 @@ var boton = document.querySelector("#color");
 
 //Evento click
 boton.addEventListener('click', () => {
-    boton.style.background = 'blue';
+    //This hace referencia al objeto en este caso boton.
+    //es lo mismo a boton.style.background
+    this.style.background = 'blue';
 });
 
 //Evento mouse over

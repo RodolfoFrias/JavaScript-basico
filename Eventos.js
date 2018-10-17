@@ -39,8 +39,7 @@ caja.addEventListener('keypress', (event) => {
     console.log("Presiona : " + String.fromCharCode(event.keyCode));
 });
 
-window.addEventListener('load', () => {
-    //Sirve igual que document.ready de Jquery
+function Animacion (){
 
     var intervalo = setInterval(function() {
         console.log("Intervalo ON")
@@ -54,9 +53,30 @@ window.addEventListener('load', () => {
             letras.style.color = "red";
             letras.style.fontSize = "50px";
         }
-    
-    
     }, 1000);
+
+    return intervalo;
+}
+
+
+window.addEventListener('load', () => {
+    //Sirve igual que document.ready de Jquery
+
+    var animacion = Animacion();
+
+    var stop = document.querySelector("#para");
+
+    //Detiene la animación de las letras
+    stop.addEventListener('click', () => {
+        clearInterval(animacion);
+    });
+
+    var start = document.querySelector("#inicia");
+
+    //Inicia animación
+    start.addEventListener('click', () => {
+        Animacion();
+    });
 
 });
 

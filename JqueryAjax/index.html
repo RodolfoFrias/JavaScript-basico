@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Peticiones Ajax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+
+    <style>
+    
+        #datos{
+            height: 200px;
+            width: 200px;
+            border: 3px solid black;
+            padding: 10px;
+            overflow: scroll;
+        }
+    
+    </style>
+
+</head>
+<body>
+    
+    <center><h1>Peticiones Ajax con Jquery</h1></center>
+    <hr>
+
+    <form action="https://reqres.in/api/users" method="POST" id="formulario">
+    
+        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="number" name="edad" placeholder="Edad">
+        <input type="text" name="carrera" placeholder="Carrera">
+        <input type="submit" id="envia">
+    
+    </form>
+
+    <br>
+
+    <div id="datos"></div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src="ajax.js"></script>
+</body>
+</html>

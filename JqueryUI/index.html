@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jquery UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../jquery-ui-1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../jquery-ui-1.12.1/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../jquery-ui-1.12.1/jquery-ui.theme.min.css" />
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script src="../../../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="ui.js"></script>
+
+    <style>
+    
+        .caja{
+            height: 200px;
+            width: 200px;
+            background: gray;
+            border: 3px solid blue;
+            border-radius: 999px;
+            display: inline-block;
+            margin-left: 50px;
+            text-align: center;
+            line-height: 200px;
+            color: black;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .lista li{
+            height: 50%;
+            padding: 10px;
+            border: 1px solid blue;
+            background: gray;
+            list-style: none; 
+            cursor: pointer;
+        }
+
+        ul .ui-selecting{background: ghostwhite}
+        ul .ui-selected{background: forestgreen}
+    
+    </style>
+
+</head>
+<body>
+
+
+
+    <center><h1>Jquery UI</h1></center>
+    <hr>
+
+    <h3>Tooltip</h3>
+    <a href="#" title="Beatbox">BBX</a>
+    <a href="#" title="Guanajuato">GTO</a>
+    <hr>
+    
+    <h3>Cuadro de dialogo</h3>
+    <button id="box">Click</button>
+    <div id="dial" title="¿Seguro?" style="display: none">Vamos!!</div>
+    <hr>
+
+    <h3>Calendario</h3>
+    <input type="text" name="" id="calendario">
+    <hr>
+
+    <h3>Tabs</h3>
+    <div id="pestanas">
+
+        <ul>
+
+            <li><a href="#tabs-1">Pestaña uno</a></li>
+            <li><a href="#tabs-2">Pestaña dos</a></li>
+
+        </ul>
+
+        <div id="tabs-1">Primer pestaña</div>
+        <div id="tabs-2">Segunda pestaña</div>
+
+    </div>
+    <hr>
+
+    <ul class="lista">
+
+        <li>Uno</li>
+        <li>Dos</li>
+        <li>Tres</li>
+        <li>Cuatro</li>
+
+    </ul>
+
+    <hr>
+    <div class="caja" id="uno">Uno</div>
+    <div class="caja" id="dos">Dos</div>
+    <div class="caja">Tres</div>
+    <div class="caja">Cuatro</div>
+
+
+</body>
+</html>

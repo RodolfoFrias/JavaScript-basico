@@ -9,7 +9,10 @@ function getInfo(){
     }
 
     return new Promise((solve, reject) => {
-        
+        var datos = JSON.stringify(info);
+
+        if(typeof(datos) != 'string') return reject('Eror no es un string');
+        return solve(datos);
     });
 
 }

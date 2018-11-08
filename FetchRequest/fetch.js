@@ -3,21 +3,25 @@
 //https://reqres.in/api/users  -> Hacer ejercicios con esta URI
 
 var div = document.querySelector("#items");
-var usuarios = [];
 
-fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(data => data.json())
-    .then(users => {
-        usuarios = users;
-        console.log(usuarios);
+function getUsers(){
+  return fetch('https://jsonplaceholder.typicode.com/posts');
+}
 
-        usuarios.map((user, i) => {
-            let items = document.createElement('h3');
-            items.innerHTML = i + ". "+ user.body;
-            div.appendChild(items);
-            document.querySelector('.load').style.display = 'none';
-        });
+getUsers()
+  .then(data => data.json())
+  .then(users => {
+  ListarUsuarios(users);
 });
+
+function ListarUsuarios(usuarios){
+  usuarios.map((user, i) => {
+      let items = document.createElement('h3');
+      items.innerHTML = i + ". "+ user.body;
+      div.appendChild(items);
+      document.querySelector('.load').style.display = 'none';
+  });
+}
 
 
 /*
@@ -30,4 +34,3 @@ fetch('https://httpbin.org/post', {
     },
     body: JSON.stringify({a: 1, b: 'Cadena de texto'})
   });*/
-
